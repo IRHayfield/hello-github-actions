@@ -1,0 +1,14 @@
+name: A workflow to test macOS runners
+on: push
+
+jobs:
+  build:
+    name: Hello macOS action
+    runs-on: macos-latest
+    steps:
+      - name: Show Mac OS X operating system version
+        run: sw_vers
+        shell: bash
+      - name: Echo Hello MacOS
+        run: echo "Hello MacOS"
+        shell: bash
